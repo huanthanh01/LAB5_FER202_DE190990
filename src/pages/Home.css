@@ -1,24 +1,33 @@
 /* Carousel Tweaks */
 .carousel-caption {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 4rem 2rem 2rem;
-  border-radius: 0 0 20px 20px;
+  bottom: 2rem;
+  z-index: 2;
 }
 
 .carousel-caption h3 {
   color: #ffffff;
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .carousel-caption p {
   color: #f1f5f9;
   font-size: 1.15rem;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%); /* Bottom gradient overlay */
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .carousel-item img {
@@ -48,4 +57,15 @@
   background-color: var(--primary);
   transform: scale(1.15);
   box-shadow: 0 6px 15px var(--primary-glow);
+}
+
+/* Menu Section Tweaks */
+.menu-img {
+  transition: transform 0.4s ease;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.menu-card:hover .menu-img {
+  transform: scale(1.1);
 }

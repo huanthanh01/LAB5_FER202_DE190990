@@ -1,0 +1,21 @@
+/* Custom Radio for Quiz */
+.custom-radio {
+  transition: all 0.3s ease;
+  border: 2px solid var(--glass-border) !important;
+  border-radius: 12px !important;
+  background-color: var(--surface);
+  color: var(--text-main);
+}
+
+.custom-radio:hover {
+  background-color: var(--glass-bg) !important;
+  border-color: var(--primary) !important;
+  transform: scale(1.01);
+}
+
+.selected-radio {
+  background-color: var(--primary-glow-light) !important;
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+  font-weight: 600;
+}

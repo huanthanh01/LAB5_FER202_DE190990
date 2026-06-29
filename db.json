@@ -1,0 +1,16 @@
+{
+  "contacts": [
+    {
+      "name": "Thành Anh Huân",
+      "email": "huanthanh0101@gmail.com",
+      "message": "I love my girlfriend !!!!",
+      "id": 1
+    },
+    {
+      "name": "Trần Khánh Linh",
+      "email": "xutakaly261@gmail.com",
+      "message": "I love my boyfriends!!!\n",
+      "id": 2
+    }
+  ]
+}

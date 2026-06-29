@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap");
+
+:root {
+  --primary: #84cc16;
+  --primary-hover: #65a30d;
+  --secondary: #a3e635;
+  --primary-glow: rgba(132, 204, 22, 0.4);
+  --primary-glow-light: rgba(132, 204, 22, 0.15);
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --surface: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --shadow-sm:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-hover:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="dark"] {
+  --primary: #f97316;
+  --primary-hover: #ea580c;
+  --secondary: #fb923c;
+  --primary-glow: rgba(249, 115, 22, 0.4);
+  --primary-glow-light: rgba(249, 115, 22, 0.15);
+  --bg-gradient: linear-gradient(135deg, #0a0a0a 0%, #171717 100%);
+  --surface: #1f1f1f;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --glass-bg: rgba(31, 31, 31, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  min-height: 100vh;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--primary);
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Premium Buttons & Backgrounds */
+.bg-primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border: none;
+  color: #ffffff !important;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px; /* Pill shape */
+  box-shadow: 0 4px 14px 0 var(--primary-glow);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 var(--primary-glow);
+  background: linear-gradient(135deg, var(--primary-hover), var(--secondary));
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  background: var(--text-muted);
+  box-shadow: none;
+  transform: none;
+}
+
+/* Cards with hover effect */
+.card {
+  border: none;
+  border-radius: 20px;
+  background: var(--surface);
+  color: var(--text-main);
+  box-shadow: var(--shadow-lg);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-header {
+  background: transparent;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.card-title {
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--primary);
+}
+
+/* Forms */
+.form-control {
+  border-radius: 12px;
+  border: 2px solid var(--glass-border);
+  padding: 0.85rem 1rem;
+  background-color: var(--surface);
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  background-color: var(--surface);
+  box-shadow: 0 0 0 4px var(--primary-glow-light);
+  color: var(--text-main);
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.form-check-input:checked {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.form-check-input:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 0.25rem var(--primary-glow-light) !important;
+}

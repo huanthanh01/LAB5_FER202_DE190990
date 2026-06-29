@@ -1,0 +1,32 @@
+/* Glassmorphism Navigation */
+.navbar {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.75rem;
+}
+
+.nav-link {
+  color: var(--text-muted) !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+  background: var(--primary-glow-light);
+}
